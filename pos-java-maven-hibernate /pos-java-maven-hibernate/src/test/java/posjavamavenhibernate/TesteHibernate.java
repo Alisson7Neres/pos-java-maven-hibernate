@@ -78,12 +78,8 @@ public class TesteHibernate {
 		UsuarioPessoa pessoa = daoGeneric.pesquisar(2L, UsuarioPessoa.class);
 		UsuarioPessoa pessoa2 = daoGeneric.pesquisar(3L, UsuarioPessoa.class);
 
-		try {
 			daoGeneric.deletarPorId(pessoa);
 			daoGeneric.deletarPorId(pessoa2);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 
 		System.out.println(pessoa);
 	}
